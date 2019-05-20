@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!-- <input
+        type="text"
+        class="mt-5"
+        [(ngModel)]="userName"> -->
+        <p *ngIf="isClicked">My secret password is: Tuna</p>
+    </div>
+    <div class="col-12">
+      <button
+        (click)="countClicks()">Knapp</button>
+        <ul>
+          <li
+            [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'transparent'}"
+            *ngFor="let click of clicksToPrint">{{click}}</li>
+        </ul>
+    </div>
+  </div>
+</div>
